@@ -1,0 +1,39 @@
+a {
+  outline: none !important;
+}
+ 
+.dropdown-inline {
+  display: inline-block;
+}
+.dropdown-toggle{
+  padding: 15px;
+  background: #fff;
+  border: 1px solid darkkhaki;
+}
+
+.dropdown-toggle .glyphicon:hover {
+  cursor: pointer;
+}
+.dropdown-menu{
+  margin: 0px -15px;
+  padding: 5px;
+}
+.tags{
+  padding: 5px;
+  background-color:cornflowerblue;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+.tags .title-text{ 
+ 
+  text-align: center;
+  text-overflow: ellipsis;
+  width: 80%;
+  float: left;
+  overflow: hidden;
+}
+.tags .glyphicon-remove{
+  width: 20%;
+  float: left;
+}
