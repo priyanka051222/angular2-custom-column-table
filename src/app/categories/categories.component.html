@@ -22,6 +22,7 @@
         </tr>
       </tbody>
     </table>
-    <button (click)='loadMore()' *ngIf='columnsToShow > 0'>Load More</button>
+    <p  class='alert alert-info' *ngIf='!columnsToShow.length > 0'>Select a column from the dropdown</p>
+    <button class='btn btn-primary' (click)='loadMore()' *ngIf='columnsToShow.length > 0'>Load More</button>
 </div> 
 </section>
