@@ -1,5 +1,5 @@
 {
-  "name": "demo-inc-aap",
+  "name": "angular2-custom-column-table-app",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -8,7 +8,6 @@
     "build": "ng build",
     "lint": "ng lint"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^4.2.4",
     "@angular/common": "^4.2.4",
