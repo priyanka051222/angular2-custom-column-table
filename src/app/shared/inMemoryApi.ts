@@ -1,13 +1,14 @@
 
 /**
- * This is an example of a Category-oriented InMemoryDbService.
+ * This is an example of a Account-oriented InMemoryDbService.
  *
  * Add the following line to `AppModule.imports`
  *   InMemoryWebApiModule.forRoot(InMemoryDataService) // or InMemoryDataOverrideService
  */
 import { Injectable } from '@angular/core';
 import { RequestMethod, Response, ResponseOptions, URLSearchParams } from '@angular/http';
-import { Category } from './category';
+import { Account } from '../accounts/account';
+import { Category } from '../categories/category';
 import { Observable } from 'rxjs/Observable';
 import { Observer } from 'rxjs/Observer';
 
@@ -75,12 +76,44 @@ export class InMemoryDataService implements InMemoryDbService {
             stage: 'Pre Series A',
             founders: ['Sachin Bansal', 'Binny Bansal']
         }];
-        return { categories: categories };
+        const accounts: Account[] = [{
+          id: '1',
+          owner: 'Priyanka Kesharwani',
+          type: 'Savings',
+          balance: 100000,
+          contact : '7987576902'
+        }, {
+            id: '2',
+            owner: 'John David',
+            type: 'Current',
+            balance: 17802,
+            contact : '726389223'
+          }, {
+            id: '3',
+            owner: 'Susan Mayer',
+            type: 'Savings',
+            balance: 22200,
+            contact : '939393322'
+          }, {
+            id: '4',
+            owner: 'Carlos Solis',
+            type: 'Deposit',
+            balance: 33333,
+            contact : '7987576902'
+          }, {
+            id: '5',
+            owner: 'Juanita Markos',
+            type: 'Current',
+            balance: 100000,
+            contact : '11122311'
+          },
+    ];
+        return { accounts: accounts, categories: categories};
     }
 }
 
 /**
- * This is an example of a Category-oriented InMemoryDbService with method overrides.
+ * This is an example of a Account-oriented InMemoryDbService with method overrides.
  */
 @Injectable()
 export class InMemoryDataOverrideService extends InMemoryDataService {
@@ -190,7 +223,7 @@ export class InMemoryDataOverrideService extends InMemoryDataService {
     private findById(collection: any[], id: number | string) {
         return collection.find((item: any) => item.id === id);
     }
-    private addCategory(user: Category) {
+    private addAccount(user: Account) {
 
     }
     private getLocation(href: string) {
